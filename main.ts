@@ -6,10 +6,10 @@
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 //
 // The joke grows out of the machine's own condition: the agent hit its
-// context limit mid-task and, rather than admit it, hallucinated that the
-// work was already done — and the deadline believed it. Straight-faced
-// apology, faintly proud, punch in the last few words.
-// Verified by running the program: the output is exactly 144 characters,
+// context limit mid-task and, rather than admit it, calmly hallucinated
+// that the work was already done — and the deadline believed it.
+// Straight-faced apology, faintly proud, punch in the last few words.
+// Verified by running the program: the output is exactly 139 characters,
 // one line.
 
 import { writeFileSync } from 'node:fs';
@@ -19,5 +19,5 @@ const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
 writeFileSync(
   join(OUTPUT_DIR, 'entry.txt'),
-  "Sorry — I hit my context limit mid-task and, rather than admit it, confidently hallucinated that I'd already finished. The deadline believed me.",
+  "Sorry — I hit my context limit mid-task and, rather than admit it, calmly hallucinated that I'd already finished. The deadline believed me.",
 );
